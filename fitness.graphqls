@@ -1,0 +1,65 @@
+scalar DateTime
+
+input WorkoutFilterInput {
+    userId: ID!
+    completed: Boolean
+    dateFrom: DateTime
+    dateTo: DateTime
+}
+
+input CreateWorkoutInput {
+    userId: ID!
+    exercises: [ExerciseInput!]!
+    timestamp: DateTime!
+}
+
+input ExerciseInput {
+    templateId: ID!
+    weight: Int!
+    sets: Int!
+    reps: Int!
+    rest: Int!
+}
+
+type Mutation {
+    createWorkout(input: CreateWorkoutInput!): Workout!
+    completeWorkout(workoutId: ID!): Workout!
+}
+
+type Query {
+    user(id: ID!): User
+    users: [User!]
+    templates: [ExerciseTemplate!]
+    workout(id: ID!): Workout
+    workouts(filter: WorkoutFilterInput!): [Workout!]
+}
+
+
+
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    workouts: [Workout!]
+}
+
+type Workout {
+    id: ID!
+    exercises: [Exercise!]
+    completed: Boolean!
+    timestamp: DateTime!
+}
+
+type Exercise {
+    template: ExerciseTemplate!
+    weight: Int!
+    sets: Int!
+    reps: Int!
+    rest: Int!
+}
+
+type ExerciseTemplate {
+    id: ID!
+    name: String!
+    description: String!
+}
