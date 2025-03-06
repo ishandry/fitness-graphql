@@ -1,0 +1,12 @@
+[
+  {
+    "id": "t1",
+    "name": "Push Up",
+    "description": "A classic push up exercise"
+  },
+  {
+    "id": "t2",
+    "name": "Squat",
+    "description": "A basic squat exercise"
+  }
+]

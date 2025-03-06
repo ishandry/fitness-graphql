@@ -1,0 +1,7 @@
+{
+    templates {
+        id
+        name
+        description
+    }
+}

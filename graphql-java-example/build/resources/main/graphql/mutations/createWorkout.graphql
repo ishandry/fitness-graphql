@@ -1,0 +1,14 @@
+mutation {
+    createWorkout(input: {
+        userId: "u1",
+        timestamp: "2024-02-20T10:00:00Z",
+        exercises: [
+            { templateId: "t1", weight: 80, sets: 3, reps: 10, rest: 60 },
+            { templateId: "t2", weight: 50, sets: 4, reps: 12, rest: 90 }
+        ]
+    }) {
+        id
+        completed
+        timestamp
+    }
+}

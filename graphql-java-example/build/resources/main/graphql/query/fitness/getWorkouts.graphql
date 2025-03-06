@@ -1,0 +1,14 @@
+{
+    workouts(filter: { userId: "u1", completed: false }) {
+        id
+        completed
+        timestamp
+        exercises {
+            template { id name description }
+            weight
+            sets
+            reps
+            rest
+        }
+    }
+}

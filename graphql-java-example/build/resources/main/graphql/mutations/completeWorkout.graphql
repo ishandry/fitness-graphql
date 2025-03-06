@@ -1,0 +1,7 @@
+mutation {
+    completeWorkout(workoutId: "WORKOUT_ID_PLACEHOLDER") {
+        id
+        completed
+        timestamp
+    }
+}

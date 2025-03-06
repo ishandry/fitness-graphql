@@ -1,0 +1,7 @@
+{
+    workouts(filter: { userId: "1", completed: true, dateFrom: "2024-01-01T00:00:00Z" }) {
+        id
+        completed
+        timestamp
+    }
+}

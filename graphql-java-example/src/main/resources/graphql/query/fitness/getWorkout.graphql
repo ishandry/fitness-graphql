@@ -1,0 +1,18 @@
+{
+    workout(id: "101") {
+        id
+        completed
+        timestamp
+        exercises {
+            template {
+                id
+                name
+                description
+            }
+            weight
+            sets
+            reps
+            rest
+        }
+    }
+}
